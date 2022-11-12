@@ -53,9 +53,10 @@ img{
 }
 
 .encabezado{
+    width: 100%;
     background-color: var(--primario);
     display: grid;
-    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-columns: 2fr 5fr 3fr;
 }
 
 .encabezado .logo{
@@ -281,7 +282,7 @@ img{
    /* Productos */
 
 .container3 {
-    width: 1079px ;
+    width: auto ;
     height: wrap ;
     margin-top: 170px ;
     display: grid;
@@ -313,3 +314,11 @@ img{
     transition: 0.5s;
     transform: scale(1.2);
 }
+
+/*
+480px Celulares
+720 tabletas
+1140 Computadoras
+1440 Pantallas
+*/
+
