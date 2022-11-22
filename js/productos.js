@@ -1,20 +1,20 @@
 const productos = [
-    {codigo: 101, nombre: 'Cross', precio:1090.0, tipo:'Disco', imagen:'Cross.jpg'},
-    {codigo: 102, nombre: 'Cross', precio:1195.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 103, nombre: 'Cross', precio:335.0, tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 104, nombre: 'Cross', precio:845.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 105, nombre: 'Cross', precio:845.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 106, nombre: 'Cross', precio:714.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 107, nombre: 'Cross', precio:235.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 108, nombre: 'Cross', precio:195.0,  tipo:'Disco', imagen:'Cross.jpg'},
-    {codigo: 109, nombre: 'Cross', precio:298.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 110, nombre: 'Cross', precio:195.0,  tipo:'Disco', imagen:'Cross.jpg'},
-    {codigo: 111, nombre: 'Cross', precio:465.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 112, nombre: 'Cross', precio:465.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 113, nombre: 'Cross', precio:405.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 114, nombre: 'Cross', precio:3850.0,  tipo:'Disco', imagen:'Cross.jpg'},
-    {codigo: 115, nombre: 'Cross', precio:1100.0,  tipo:'Vinilo', imagen:'Cross.jpg'},
-    {codigo: 116, nombre: 'Cross', precio:530.0,  tipo:'Disco', imagen:'Cross.jpg'}
+    {codigo: 101, precio:'$1090.0',  tipo:'Disco',  artista:'The Weekend',    nombre:'After Hours'},
+    {codigo: 102, precio:'$1195.0',  tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 104, precio:'$845.0',   tipo:'Vinilo', artista:'Daft Punk',      nombre:'Random Access Memories'},
+    {codigo: 105, precio:'$845.0',   tipo:'Vinilo', artista:'The Weekend',    nombre:'Beauty Behind the Madnes'},
+    {codigo: 106, precio:'$714.0',   tipo:'Vinilo', artista:'Justice',        nombre:'Woman'},
+    {codigo: 107, precio:'$235.0',   tipo:'Vinilo', artista:'Travis Scott',   nombre:'Birds in the trap sing Mcknight'},
+    {codigo: 108, precio:'$195.0',   tipo:'Disco',  artista:'Daft Punk',      nombre:'Homework'},
+    {codigo: 103, precio:'$335.0',   tipo:'Vinilo', artista:'Travis Scott',   nombre:'Rodeo'},
+    {codigo: 109, precio:'$298.0',   tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 110, precio:'$195.0',   tipo:'Disco',  artista:'Justice',        nombre:'Cross'},
+    {codigo: 111, precio:'$465.0',   tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 112, precio:'$465.0',   tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 113, precio:'$405.0',   tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 114, precio:'$3850.0',  tipo:'Disco',  artista:'Justice',        nombre:'Cross'},
+    {codigo: 115, precio:'$1100.0',  tipo:'Vinilo', artista:'Justice',        nombre:'Cross'},
+    {codigo: 116, precio:'$530.0',   tipo:'Disco',  artista:'Justice',        nombre:'Cross'}
 ]
 
 document.write('<div class="productos">');
@@ -25,14 +25,18 @@ for(i=0;i<productos.length;i++){
     <div class = " item " >
     <a href="#">
         <div class="caratula">
-            <img src="img/Caratulas/Justice/${productos[i].imagen}">
+            <img src="img/Caratulas/${productos[i].artista}/${productos[i].nombre}.jpg">
         </div>
         <div>
+            <p>${productos[i].artista}</p>
             <p>${productos[i].nombre}</p>
-            <p>${productos[i].precio}</p>
+            <div>
+                <p>${productos[i].precio}</p>
+            </div>
         </div>
     </a>
+</div >
     `);
 }
-document.write('</section>')
-document.write('</div >')
+document.write('</section>');
+document.write('</div >');
